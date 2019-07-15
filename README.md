@@ -1,5 +1,6 @@
 ##盗墓笔记
 ##还未进行push，amend进行追加，no-edit不修改备注
+
 git commit --amend --no-edit
 
 ##资料
