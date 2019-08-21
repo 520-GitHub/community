@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!--解决：由于修改头部片段时，多个页面都要进行修改-->i
+<div th:fragment="copy">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">JAVA社区</span>
+                </button>
+                <a class="navbar-brand" href="/">JAVA社区</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="搜索问题">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li th:if="${session.user != null}"><a href="/publish">提问</a></li>
+                    <li><a href="/profile/replies">通知<span class="badge" th:text="${session.unreadCount}"></span></a></li>
+
+                    <!--7.2判断session中的user是否为空，如果不为空显示登陆后的信息-->
+                    <li class="dropdown" th:if="${session.user != null}">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false">
+                            <!--登入后显示昵称-->
+                            <span th:text="${session.user.getName()}"></span>
+                            <!--昵称旁边倒三角点击显示信息-->
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile/questions">我的问题</a></li>
+                            <li><a href="/logout">退出登录</a></li>
+                        </ul>
+                    </li>
+                    <!--7.3如果为空跳转回登录界面-->
+                    <li th:if="${session.user == null}">
+                        <!--2.GitHub授权登录之调用Authorize接口，
+                         登入成功时——>回调redirect-uri携带code信息
+                         -->
+                        <a href="https://github.com/login/oauth/authorize?client_id=7137fe0ce10b9e42685d&redirect_uri=http://localhost:8888/callback&scope=user&state=1">登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+</html>

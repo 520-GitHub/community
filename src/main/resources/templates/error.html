@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>JAVA社区</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--1.使用Bootstrap编写导航栏样式
+    BootStrap是一个移动设备优先的UI框架，可以在不编写任何css、js代码就可以实现
+    比较漂亮有交互性的页面。平常用到其表单、表单项、模态框、布局、栅格系统等。
+    -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+
+</head>
+<body>
+<div th:replace="~{navigation :: nav}"></div>
+<div class="container-fluid main">
+        <div class="jumbotron">
+            <h1>出错啦！！！</h1>
+            <p th:text="${message}">服务器过热啦！！！稍后再试试吧~~~</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/" role="button">回到主页</a>
+            </p>
+        </div>
+</div>
+</body>
+</html>
+</body>
+</html>
