@@ -46,7 +46,7 @@
                         <!--2.GitHub授权登录之调用Authorize接口，
                          登入成功时——>回调redirect-uri携带code信息
                          -->
-                        <a href="https://github.com/login/oauth/authorize?client_id=7137fe0ce10b9e42685d&redirect_uri=http://localhost:8888/callback&scope=user&state=1">登录</a>
+                        <a th:href="@{https://github.com/login/oauth/authorize(client_id='7137fe0ce10b9e42685d',redirect_uri=${#httpServletRequest.getRequestURL()+'callback'},scope='user',state='1')}">登录</a>
                     </li>
                 </ul>
             </div>

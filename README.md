@@ -1,6 +1,28 @@
 ##还未进行push，amend进行追加，no-edit不修改备注
 git commit --amend --no-edit
 
+##部署
+###依赖
+- Git
+- JDK
+- Maven
+- MySQL
+##步骤
+- yum update
+- yum install git
+- mkdir App
+- cd App
+- git clone https://github.com/github
+- yum install maven
+- mvn -v
+- mvn compile package
+- cp src/main/resources/application.properties src/main/resources/application-production.properties
+- vim src/main/resources/application-production.properties
+- mvn package
+- java -jar -Dspring.profiles.active=production target/community-0.0.1-SNAPSHOT.jar
+
+
+
 ##资料<br>
 [Spring 文档](https://spring.io/guides)<br>
 [Spring Web](https://spring.io/guides/gs/serving-web-content/)<br>
