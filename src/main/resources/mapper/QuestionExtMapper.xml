@@ -26,7 +26,29 @@
         COMMENT_COUNT = COMMENT_COUNT + #{commentCount,jdbcType=INTEGER}
         where id = #{id}
     </update>
-    <select id="selectRelated" parameterType="life.majiang.community.model.Question" resultMap="BaseResultMap">
+    <select id="selectRelated" parameterType="life.majiang.community.model.Question"
+            resultMap="BaseResultMap">
         select * from QUESTION where id != #{id} and tag regexp #{tag}
+    </select>
+
+    <select id="countBySearch" parameterType="life.majiang.community.dto.QuestionQueryDTO"
+            resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM QUESTION
+        <where>
+            <if test="search != null">
+                AND TITLE REGEXP #{search}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectBySearch" parameterType="life.majiang.community.dto.QuestionQueryDTO"
+            resultMap="BaseResultMap">
+        SELECT * FROM QUESTION
+        <where>
+            <if test="search != null">
+                AND TITLE REGEXP #{search}
+            </if>
+        </where>
+        ORDER BY gmt_create DESC LIMIT #{page},#{size}
     </select>
 </mapper>

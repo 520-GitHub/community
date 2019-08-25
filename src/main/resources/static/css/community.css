@@ -115,3 +115,7 @@ body {
     white-space: normal;
     display: inline-block;
 }
+.footer{
+    padding: 10px;
+    margin-left: 20%;
+}

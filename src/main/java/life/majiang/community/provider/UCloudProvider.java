@@ -24,7 +24,7 @@ public class UCloudProvider {
     @Value("${ucloud.ufile.private-key}")
     private String privateKey;
 
-    @Value("${ucloud.ufile.bucketName}")
+    @Value("${ucloud.ufile.bucket-name}")
     private String bucketName;
 
     @Value("${ucloud.ufile.region}")

@@ -1,0 +1,23 @@
+2019-08-25 10:04:02.640  INFO 856 --- [restartedMain] l.m.community.CommunityApplication       : Starting CommunityApplication on Leduo with PID 856 (F:\Idea\community\target\classes started by Leduo in F:\Idea\community)
+2019-08-25 10:04:02.646  INFO 856 --- [restartedMain] l.m.community.CommunityApplication       : No active profile set, falling back to default profiles: default
+2019-08-25 10:04:02.718  INFO 856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-08-25 10:04:02.718  INFO 856 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-08-25 10:04:04.321  INFO 856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2019-08-25 10:04:04.341  INFO 856 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-08-25 10:04:04.341  INFO 856 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-25 10:04:04.348  INFO 856 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.21] using APR version [1.6.5].
+2019-08-25 10:04:04.350  INFO 856 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-08-25 10:04:04.350  INFO 856 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-08-25 10:04:04.355  INFO 856 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1a  20 Nov 2018]
+2019-08-25 10:04:04.442  INFO 856 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-08-25 10:04:04.442  INFO 856 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1723 ms
+2019-08-25 10:04:05.069  INFO 856 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-25 10:04:05.207  INFO 856 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-08-25 10:04:05.690  INFO 856 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-08-25 10:04:05.751  INFO 856 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2019-08-25 10:04:05.757  INFO 856 --- [restartedMain] l.m.community.CommunityApplication       : Started CommunityApplication in 3.649 seconds (JVM running for 5.079)
+2019-08-25 10:04:52.774  INFO 856 --- [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-25 10:04:52.775  INFO 856 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-08-25 10:04:52.783  INFO 856 --- [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-08-25 10:04:52.887  INFO 856 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-08-25 10:04:53.151  INFO 856 --- [http-nio-8888-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.

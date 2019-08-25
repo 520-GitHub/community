@@ -112,6 +112,11 @@ public class CommentService {
     private void createNotify(Comment comment, Long receiver, String notifierName,
                               String outerTitle, NotificationEnum notificationType,
                               Long outerId) {
+//        如果触发通知的用户是本人。不触发通知
+        if(receiver == comment.getCommentator()){
+            return ;
+        }
+
         Notification notification = new Notification();
         notification.setGmtCreate(System.currentTimeMillis());
         notification.setType(notificationType.getType());

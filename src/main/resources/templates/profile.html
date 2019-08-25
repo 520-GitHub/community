@@ -22,7 +22,7 @@
 <!--使用Bootstrap编写响应式布局发布问题-->
 <div class="container-fluid main profile">
     <div class="row">
-        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12 ">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 ">
             <h2><span th:text="${sectionName}"></span></h2>
             <hr>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:if="${section =='questions'}">
@@ -108,7 +108,7 @@
                 </nav>
             </div>
         </div>
-        <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <div class="list-group section">
                 <a href="/profile/questions" class="list-group-item"
                    th:classappend="${section == 'questions'}?'active':''">我的问题</a>
@@ -119,6 +119,7 @@
         </div>
     </div>
 </div>
+<div th:replace="~{footer :: foot}"></div>
 </body>
 </html>
 </body>
