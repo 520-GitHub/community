@@ -119,3 +119,9 @@ body {
     padding: 10px;
     margin-left: 20%;
 }
+
+.index-span{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -1,26 +1,12 @@
 create table comment
 (
 	id bigint auto_increment primary key ,
-	parent_id bigint not null,
-	type int not null,
-	commentator bigint not null,
-	gmt_create bigint not null,
-	gmt_modified bigint not null,
-	like_count INTEGER default 0,
-	comment_count INTEGER default 0
+	parent_id bigint not null comment '父类ID',
+	type int not null comment '父类类型',
+	commentator bigint not null comment '评论人id',
+	gmt_create bigint not null comment '创建时间',
+	gmt_modified bigint not null comment '更新时间',
+	like_count INTEGER default 0 comment '点赞数',
+	comment_count INTEGER default 0 comment '评论回复数'
 );
-
-comment on column comment.parent_id is '父类ID';
-
-comment on column comment.type is '父类类型';
-
-comment on column comment.commentator is '评论人id';
-
-comment on column comment.gmt_create is '创建时间';
-
-comment on column comment.gmt_modified is '更新时间';
-
-comment on column comment.like_count is '点赞数';
-
-comment on column comment.comment_count is '评论回复数';
 

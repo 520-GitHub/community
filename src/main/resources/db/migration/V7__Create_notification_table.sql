@@ -1,21 +1,11 @@
-CREATE TABLE NOTIFICATION
+create table notification
 (
-	ID BIGINT AUTO_INCREMENT PRIMARY KEY ,
-	NOTIFIER BIGINT NOT NULL,
-	RECEIVER BIGINT NOT NULL,
-	OUTERID BIGINT NOT NULL,
-	TYPE INT NOT NULL,
-	GMT_CREATE BIGINT NOT NULL,
-	STATUS INT DEFAULT 0 NOT NULL,
+	id bigint auto_increment primary key ,
+	notifier bigint not null comment '发送通知的用户',
+	receiver bigint not null comment '接收消息用户',
+	outerid bigint not null comment '外键id',
+	type int not null comment '类型',
+	gmt_create bigint not null comment '时间',
+	status int default 0 not null comment '未读数'
 );
-
-COMMENT ON COLUMN NOTIFICATION.NOTIFIER IS '发送通知的用户';
-
-COMMENT ON COLUMN NOTIFICATION.RECEIVER IS '接收消息用户';
-
-COMMENT ON COLUMN NOTIFICATION.OUTERID IS '外键ID';
-
-COMMENT ON COLUMN NOTIFICATION.TYPE IS '类型';
-
-COMMENT ON COLUMN NOTIFICATION.STATUS IS '未读数';
 

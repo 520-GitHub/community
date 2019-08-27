@@ -9,11 +9,17 @@
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <!--分页-->
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
-
+<!--        jdbc:mysql://localhost:3306/community?useUnicode=true&amp;
+useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;
+serverTimezone=UTC&amp;characterEncoding=utf-8&amp;useSSL=false-->
         <jdbcConnection driverClass="org.h2.Driver"
                         connectionURL="jdbc:h2:~/community"
                         userId="root"
                         password="1314">
+            <!--设置可以获取tables remarks信息-->
+            <property name="useInformationSchema" value="true"/>
+            <!--设置可以获取remarks信息-->
+            <property name="remarks" value="true"/>
         </jdbcConnection>
 
         <javaTypeResolver>
