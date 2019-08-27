@@ -70,7 +70,7 @@ public class QuestionService {
         //通过QuestionMapper查询总个数totalCount，和page页数 传入 PaginationDTO进行分页逻辑设置
         paginationDTO.setPagination(totalPage, page);
 
-        Integer offset = size * (page - 1);
+        Integer offset = page < 1 ? 0 : size * (page - 1);
 //        传入page和size
         questionQueryDTO.setPage(offset);
         questionQueryDTO.setSize(size);
